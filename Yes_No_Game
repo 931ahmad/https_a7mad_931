@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A fun Yes or No AI game inspired by Instagram user https_a7mad_931." />
+  <meta name="keywords" content="https_a7mad_931, AI yes or no game, ask question, Instagram game" />
+  <title>Ask the AI – https_a7mad_931</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #191919, #1f1f1f);
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #00ffd1;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    p.subtitle {
+      color: #aaa;
+      font-size: 1rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    input {
+      padding: 12px;
+      width: 90%;
+      max-width: 400px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 12px;
+      outline: none;
+      margin-bottom: 15px;
+    }
+
+    button {
+      background-color: #00ffd1;
+      color: #000;
+      font-size: 1.1rem;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #00ccaa;
+    }
+
+    #response {
+      font-size: 2rem;
+      margin-top: 30px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .signature {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ask Me Anything</h1>
+  <p class="subtitle">Get a Yes or No from the AI 🤖</p>
+
+  <input id="question" type="text" placeholder="Type your question here..." />
+  <button onclick="answerQuestion()">Ask</button>
+
+  <div id="response"></div>
+
+  <div class="signature">Created for <strong>@https_a7mad_931</strong></div>
+
+  <script>
+    function answerQuestion() {
+      const responses = [
+        "✅ Yes 😎",
+        "❌ No 🙅‍♂️"
+      ];
+      const random = responses[Math.floor(Math.random() * responses.length)];
+      document.getElementById("response").innerHTML = random;
+    }
+  </script>
+</body>
+</html>
